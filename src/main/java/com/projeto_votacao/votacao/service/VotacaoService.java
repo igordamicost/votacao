@@ -10,4 +10,6 @@ public interface VotacaoService {
     List<Votacao> findAll();
 
     Votacao findById(Long idVotacao);
+
+    Votacao registerData(Votacao votacaoData);
 }

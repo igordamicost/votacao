@@ -5,16 +5,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Votacao {
+public class Selecao {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
         private Long id;
-        private String campo1;
-        private String campo2;
-        private String idCampoTexto;
-        private String idCampoData;
+        private String tipo;
+        private String String;
+        private List<Item> itens;
 }

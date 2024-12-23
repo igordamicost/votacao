@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,9 @@ public class VotacaoController {
     @GetMapping("/{idVotacao}")
     public ResponseEntity<Votacao> getById(Long idVotacao) {
         return ResponseEntity.ok(service.findById(idVotacao));
+    }
+    @PostMapping()
+    public ResponseEntity<Votacao> post(Votacao votacao) {
+        return ResponseEntity.ok(service.registerData(votacao));
     }
 }

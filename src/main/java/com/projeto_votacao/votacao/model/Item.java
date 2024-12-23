@@ -9,12 +9,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Votacao {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.TABLE)
         private Long id;
-        private String campo1;
-        private String campo2;
-        private String idCampoTexto;
-        private String idCampoData;
+        private String texto;
+        private String url;
+        private Body body;
 }
+
+
+
